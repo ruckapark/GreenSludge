@@ -1,0 +1,31 @@
+{
+  "client_name": "STEP Givors",
+  "date_of_sample": "2023-11-09",
+  "directory": "/SYSEG - STEP Givors",
+  "concentrations": {
+    "0": {
+      "filename": "0_raw_0001.xls",
+      "plancher": "left",
+    },
+    "20": {
+      "filename": "20_raw_0001.xls",
+      "plancher": "left",
+    },
+    "40": {
+      "filename": "60_40_raw_0001.xls",
+      "plancher": "right",
+    },
+    "60": {
+      "filename": "60_40_raw_0001.xls",
+      "plancher": "left",
+    },
+    "80": {
+      "filename": "100_80_raw_0001.xls",
+      "plancher": "right",
+    },
+    "100": {
+      "filename": "100_80_raw_0001.xls",
+      "plancher": "left",
+    }
+  }
+}
