@@ -1,0 +1,1974 @@
+<PhenoRack>
+  <Session>
+    <Protocol>
+      <Attribut Name="Duration" Value="000:20:00" Header="expdur" />
+      <Attribut Name="Root Result Path" Value="" Header="rootresultpath" />
+      <Attribut Name="Root Result Name" Value="" Header="rootresultname" />
+      <Attribut Name="ReadOnly" Value="0" Header="readonly" />
+      <Attribut Name="PythonAddOnActivated" Value="0" Header="pythonaddonactivated" />
+      <Attribut Name="ValidateUserGroup" Value="" Header="validateusergroup" />
+      <TimeBins>
+        <Attribut Name="Period" Value="8760:00:00" Header="period" />
+      </TimeBins>
+      <StartingGroups />
+      <ConfigOKR>
+        <Width>1280</Width>
+        <Height>800</Height>
+        <Windowed>true</Windowed>
+        <NumberSegment>1000</NumberSegment>
+        <Ratio>1</Ratio>
+        <Rotate>10</Rotate>
+        <BitmapName>default</BitmapName>
+        <NumberStrip>10</NumberStrip>
+        <OpaqueDiameter>0</OpaqueDiameter>
+        <DisplayIndex>2</DisplayIndex>
+        <HtmlStripBackgroundColor>White</HtmlStripBackgroundColor>
+        <HtmlStripForegroundColor>Black</HtmlStripForegroundColor>
+        <X>0</X>
+        <Y>0</Y>
+        <HalfMask>false</HalfMask>
+        <HalfAngle>0</HalfAngle>
+        <Sigmoid>NaN</Sigmoid>
+        <MoveWorld>false</MoveWorld>
+        <WireMode>false</WireMode>
+      </ConfigOKR>
+      <JoinedAreas />
+      <IO>
+        <COM />
+        <IOBoards />
+      </IO>
+      <Triggers />
+      <Stimuli />
+      <Module Name="AcqPointGrey2" Type="Acquisition">
+        <Set Name="AcqPointGrey2">
+          <Attribut Name="Active" Value="1" Header="active" />
+          <Attribut Name="BoardId" Value="0" Header="boardid" />
+          <Attribut Name="SynchronizedAcq" Value="0" Header="synchronizedacq" />
+        </Set>
+        <Module Name="AcqPointGrey2Channel" Type="AcquisitionChannel">
+          <Set Name="AcqPointGrey2Channel">
+            <Attribut Name="Active" Value="1" Header="active" />
+            <Attribut Name="Standard" Value="PAL" Header="acqstandard" />
+            <Attribut Name="Video Input" Value="1" Header="acqinput" />
+            <Attribut Name="Fps" Value="15" Header="acqfps" />
+            <Attribut Name="Width" Value="1288" Header="acqwidth" />
+            <Attribut Name="Height" Value="964" Header="acqheight" />
+            <Attribut Name="DateTimeFormat" Value="" Header="dateTimeFormat" />
+            <Attribut Name="DateTimeColor" Value="FFFFFF" Header="datetimecolor" />
+            <Attribut Name="DateTimePercentWidth" Value="0" Header="datetimepercentwidth" />
+            <Attribut Name="DateTimePercentHeight" Value="0" Header="datetimepercentheight" />
+            <Attribut Name="Calibration" Value="" Header="calibration" />
+            <Attribut Name="Zoom X" Value="0" Header="zoomx" />
+            <Attribut Name="Zoom Y" Value="0" Header="zoomy" />
+            <Attribut Name="Mode" Value="0" Header="acqmode" />
+            <Attribut Name="Pixel Format" Value="Mono8" Header="pixelformat" />
+            <Attribut Name="Color Processing" Value="DISABLED" Header="colorprocessing" />
+            <Attribut Name="Serial" Value="21411101" Header="serial" />
+            <Attribut Name="Register" Value="" Header="register" />
+            <Attribut Name="Register Value" Value="" Header="registerValue" />
+            <Attribut Name="Bandwidth" Value="100" Header="bandwidthValue" />
+            <Attribut Name="Gain" Value="0" Header="gain" />
+            <Attribut Name="Shutter" Value="1172" Header="shutter" />
+            <Attribut Name="Brightness" Value="0" Header="brightness" />
+            <Attribut Name="Sharpness" Value="0" Header="sharpness" />
+            <Attribut Name="Hue" Value="0" Header="hue" />
+            <Attribut Name="Saturation" Value="0" Header="saturation" />
+            <Attribut Name="AutoExposure" Value="0" Header="autoExposureValue" />
+            <Attribut Name="WhiteBalance" Value="0" Header="whiteBalanceValue" />
+            <Attribut Name="Gamma" Value="0" Header="gammaValue" />
+            <Attribut Name="Iris" Value="0" Header="irisValue" />
+            <Attribut Name="Focus" Value="0" Header="focusValue" />
+            <Attribut Name="Pan" Value="0" Header="panValue" />
+            <Attribut Name="Tilt" Value="0" Header="tiltValue" />
+            <Attribut Name="TriggerDelay" Value="0" Header="triggerDelayValue" />
+            <Attribut Name="SoftwareWhiteBalance" Value="0" Header="softwareWhiteBalanceValue" />
+            <Attribut Name="PacketSize" Value="5436" Header="packetsize" />
+            <Attribut Name="PacketDelay" Value="3200" Header="packetdelay" />
+            <Attribut Name="UseEmbeddedFrameCounter" Value="0" Header="useEmbeddedFrameCounter" />
+          </Set>
+          <Location Name="Loc{01-20}" />
+          <Alias Name="Plancher Gauche" />
+          <Module Name="DShowRecorder" Type="MovieRecorder">
+            <Set Name="DShowRecorder">
+              <Attribut Name="Active" Value="1" Header="active" />
+              <Attribut Name="Fps" Value="15" Header="recfps" />
+              <Attribut Name="FIFO Size" Value="10" Header="recfifosize" />
+              <Attribut Name="Codec" Value="xvid" Header="codec" />
+              <Attribut Name="UnderSample" Value="1" Header="underSample" />
+              <Attribut Name="StartRange" Value="" Header="startRange" />
+              <Attribut Name="DurationRange" Value="" Header="durationRange" />
+              <Attribut Name="Container" Value="avi" Header="container" />
+              <Attribut Name="PixelFormat" Value="RGB32" Header="pixelFormat" />
+              <Attribut Name="ForceFpsRewrite" Value="0" Header="forceFpsRewrite" />
+              <Attribut Name="ResizeVideo" Value="1" Header="resizeVideo" />
+              <Attribut Name="VideoFilenameSuffix" Value="" Header="videoFilenameSuffix" />
+              <Attribut Name="TimestampFile" Value="0" Header="timestampFile" />
+            </Set>
+          </Module>
+          <Module Name="ModImgThreshold" Type="Module">
+            <Set Name="ModImgThreshold">
+              <Attribut Name="Active" Value="1" Header="active" />
+            </Set>
+            <Module Name="SinkImage" Type="Sink">
+              <Set Name="SinkImage">
+                <Attribut Name="Active" Value="1" Header="active" />
+              </Set>
+            </Module>
+          </Module>
+          <Module Name="IPGlobal" Type="ImgProc">
+            <Set Name="IPGlobal">
+              <Attribut Name="Active" Value="1" Header="active" />
+              <Attribut Name="Parallelize" Value="0" Header="parallelize" />
+            </Set>
+            <Module Name="Bkg" Type="BkgFilter">
+              <Set Name="Default">
+                <Attribut Name="Active" Value="1" Header="active" />
+                <Attribut Name="Bkg File" Value="" Header="bkgfile" />
+                <Attribut Name="Bkg Refresh Delay" Value="0" Header="bkgrefreshdelay" />
+                <Attribut Name="Save to disk" Value="0" Header="savetodisk" />
+              </Set>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="3" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc01" Header="location" />
+                  <Attribut Name="Area Name" Value="A01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="4" Name="A01_Boue" />
+                  <SubArea id="6" Name="A01_Main" />
+                  <SubArea id="7" Name="A01_Sec" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="10" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc02" Header="location" />
+                  <Attribut Name="Area Name" Value="A02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="11" Name="A02_Boue" />
+                  <SubArea id="12" Name="A02_Sec" />
+                  <SubArea id="68" Name="A02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="13" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc03" Header="location" />
+                  <Attribut Name="Area Name" Value="A03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="14" Name="A03_Boue" />
+                  <SubArea id="15" Name="A03_Sec" />
+                  <SubArea id="70" Name="A03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="16" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc04" Header="location" />
+                  <Attribut Name="Area Name" Value="A04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="17" Name="A04_Boue" />
+                  <SubArea id="18" Name="A04_Sec" />
+                  <SubArea id="72" Name="A04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="19" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc05" Header="location" />
+                  <Attribut Name="Area Name" Value="A05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="20" Name="A05_Boue" />
+                  <SubArea id="21" Name="A05_Sec" />
+                  <SubArea id="74" Name="A05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="22" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc06" Header="location" />
+                  <Attribut Name="Area Name" Value="B01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="23" Name="B01_Boue" />
+                  <SubArea id="24" Name="B01_Sec" />
+                  <SubArea id="76" Name="B01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="25" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc07" Header="location" />
+                  <Attribut Name="Area Name" Value="B02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="26" Name="B02_Boue" />
+                  <SubArea id="27" Name="B02_Sec" />
+                  <SubArea id="78" Name="B02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="28" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc08" Header="location" />
+                  <Attribut Name="Area Name" Value="B03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="29" Name="B03_Boue" />
+                  <SubArea id="30" Name="B03_Sec" />
+                  <SubArea id="80" Name="B03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="31" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc09" Header="location" />
+                  <Attribut Name="Area Name" Value="B04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="32" Name="B04_Boue" />
+                  <SubArea id="33" Name="B04_Sec" />
+                  <SubArea id="82" Name="B04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="34" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc10" Header="location" />
+                  <Attribut Name="Area Name" Value="B05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="35" Name="B05_Boue" />
+                  <SubArea id="36" Name="B05_Sec" />
+                  <SubArea id="84" Name="B05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="37" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc11" Header="location" />
+                  <Attribut Name="Area Name" Value="C01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="38" Name="C01_Boue" />
+                  <SubArea id="39" Name="C01_Sec" />
+                  <SubArea id="86" Name="C01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="40" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc12" Header="location" />
+                  <Attribut Name="Area Name" Value="C02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="41" Name="C02_Boue" />
+                  <SubArea id="42" Name="C02_Sec" />
+                  <SubArea id="88" Name="C02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="43" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc13" Header="location" />
+                  <Attribut Name="Area Name" Value="C03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="44" Name="C03_Boue" />
+                  <SubArea id="45" Name="C03_Sec" />
+                  <SubArea id="90" Name="C03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="46" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc14" Header="location" />
+                  <Attribut Name="Area Name" Value="C04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="47" Name="C04_Boue" />
+                  <SubArea id="48" Name="C04_Sec" />
+                  <SubArea id="92" Name="C04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="49" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc15" Header="location" />
+                  <Attribut Name="Area Name" Value="C05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="50" Name="C05_Boue" />
+                  <SubArea id="51" Name="C05_Sec" />
+                  <SubArea id="94" Name="C05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="52" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc16" Header="location" />
+                  <Attribut Name="Area Name" Value="D01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="53" Name="D01_Boue" />
+                  <SubArea id="54" Name="D01_Sec" />
+                  <SubArea id="96" Name="D01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="55" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc17" Header="location" />
+                  <Attribut Name="Area Name" Value="D02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="56" Name="D02_Boue" />
+                  <SubArea id="57" Name="D02_Sec" />
+                  <SubArea id="98" Name="D02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="58" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc18" Header="location" />
+                  <Attribut Name="Area Name" Value="D03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="59" Name="D03_Boue" />
+                  <SubArea id="60" Name="D03_Sec" />
+                  <SubArea id="100" Name="D03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="61" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc19" Header="location" />
+                  <Attribut Name="Area Name" Value="D04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="62" Name="D04_Boue" />
+                  <SubArea id="63" Name="D04_Sec" />
+                  <SubArea id="102" Name="D04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="64" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc20" Header="location" />
+                  <Attribut Name="Area Name" Value="D05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="1" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="10" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="5" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406833" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406833" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="65" Name="D05_Boue" />
+                  <SubArea id="66" Name="D05_Sec" />
+                  <SubArea id="104" Name="D05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+            </Module>
+          </Module>
+        </Module>
+        <Module Name="AcqPointGrey2Channel" Type="AcquisitionChannel">
+          <Set Name="AcqPointGrey2Channel">
+            <Attribut Name="Active" Value="1" Header="active" />
+            <Attribut Name="Standard" Value="PAL" Header="acqstandard" />
+            <Attribut Name="Video Input" Value="2" Header="acqinput" />
+            <Attribut Name="Fps" Value="15" Header="acqfps" />
+            <Attribut Name="Width" Value="1288" Header="acqwidth" />
+            <Attribut Name="Height" Value="964" Header="acqheight" />
+            <Attribut Name="DateTimeFormat" Value="" Header="dateTimeFormat" />
+            <Attribut Name="DateTimeColor" Value="FFFFFF" Header="datetimecolor" />
+            <Attribut Name="DateTimePercentWidth" Value="0" Header="datetimepercentwidth" />
+            <Attribut Name="DateTimePercentHeight" Value="0" Header="datetimepercentheight" />
+            <Attribut Name="Calibration" Value="" Header="calibration" />
+            <Attribut Name="Zoom X" Value="0" Header="zoomx" />
+            <Attribut Name="Zoom Y" Value="0" Header="zoomy" />
+            <Attribut Name="Mode" Value="0" Header="acqmode" />
+            <Attribut Name="Pixel Format" Value="Mono8" Header="pixelformat" />
+            <Attribut Name="Color Processing" Value="DISABLED" Header="colorprocessing" />
+            <Attribut Name="Serial" Value="18025193" Header="serial" />
+            <Attribut Name="Register" Value="" Header="register" />
+            <Attribut Name="Register Value" Value="" Header="registerValue" />
+            <Attribut Name="Bandwidth" Value="100" Header="bandwidthValue" />
+            <Attribut Name="Gain" Value="0" Header="gain" />
+            <Attribut Name="Shutter" Value="1172" Header="shutter" />
+            <Attribut Name="Brightness" Value="0" Header="brightness" />
+            <Attribut Name="Sharpness" Value="0" Header="sharpness" />
+            <Attribut Name="Hue" Value="0" Header="hue" />
+            <Attribut Name="Saturation" Value="0" Header="saturation" />
+            <Attribut Name="AutoExposure" Value="0" Header="autoExposureValue" />
+            <Attribut Name="WhiteBalance" Value="0" Header="whiteBalanceValue" />
+            <Attribut Name="Gamma" Value="0" Header="gammaValue" />
+            <Attribut Name="Iris" Value="0" Header="irisValue" />
+            <Attribut Name="Focus" Value="0" Header="focusValue" />
+            <Attribut Name="Pan" Value="0" Header="panValue" />
+            <Attribut Name="Tilt" Value="0" Header="tiltValue" />
+            <Attribut Name="TriggerDelay" Value="0" Header="triggerDelayValue" />
+            <Attribut Name="SoftwareWhiteBalance" Value="0" Header="softwareWhiteBalanceValue" />
+            <Attribut Name="PacketSize" Value="5436" Header="packetsize" />
+            <Attribut Name="PacketDelay" Value="3200" Header="packetdelay" />
+            <Attribut Name="UseEmbeddedFrameCounter" Value="0" Header="useEmbeddedFrameCounter" />
+          </Set>
+          <Location Name="Loc{21-40}" />
+          <Alias Name="Plancher Droit" />
+          <Module Name="DShowRecorder" Type="MovieRecorder">
+            <Set Name="DShowRecorder">
+              <Attribut Name="Active" Value="1" Header="active" />
+              <Attribut Name="Fps" Value="15" Header="recfps" />
+              <Attribut Name="FIFO Size" Value="10" Header="recfifosize" />
+              <Attribut Name="Codec" Value="xvid" Header="codec" />
+              <Attribut Name="UnderSample" Value="1" Header="underSample" />
+              <Attribut Name="StartRange" Value="" Header="startRange" />
+              <Attribut Name="DurationRange" Value="" Header="durationRange" />
+              <Attribut Name="Container" Value="avi" Header="container" />
+              <Attribut Name="PixelFormat" Value="RGB32" Header="pixelFormat" />
+              <Attribut Name="ForceFpsRewrite" Value="0" Header="forceFpsRewrite" />
+              <Attribut Name="ResizeVideo" Value="1" Header="resizeVideo" />
+              <Attribut Name="VideoFilenameSuffix" Value="" Header="videoFilenameSuffix" />
+              <Attribut Name="TimestampFile" Value="0" Header="timestampFile" />
+            </Set>
+          </Module>
+          <Module Name="ModImgThreshold" Type="Module">
+            <Set Name="ModImgThreshold">
+              <Attribut Name="Active" Value="1" Header="active" />
+            </Set>
+            <Module Name="SinkImage" Type="Sink">
+              <Set Name="SinkImage">
+                <Attribut Name="Active" Value="1" Header="active" />
+              </Set>
+            </Module>
+          </Module>
+          <Module Name="IPGlobal" Type="ImgProc">
+            <Set Name="IPGlobal">
+              <Attribut Name="Active" Value="1" Header="active" />
+              <Attribut Name="Parallelize" Value="0" Header="parallelize" />
+            </Set>
+            <Module Name="Bkg" Type="BkgFilter">
+              <Set Name="Default">
+                <Attribut Name="Active" Value="1" Header="active" />
+                <Attribut Name="Bkg File" Value="" Header="bkgfile" />
+                <Attribut Name="Bkg Refresh Delay" Value="0" Header="bkgrefreshdelay" />
+                <Attribut Name="Save to disk" Value="0" Header="savetodisk" />
+              </Set>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="105" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc21" Header="location" />
+                  <Attribut Name="Area Name" Value="A01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="106" Name="A01_Boue" />
+                  <SubArea id="108" Name="A01_Main" />
+                  <SubArea id="109" Name="A01_Sec" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="112" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc22" Header="location" />
+                  <Attribut Name="Area Name" Value="A02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="113" Name="A02_Boue" />
+                  <SubArea id="114" Name="A02_Sec" />
+                  <SubArea id="170" Name="A02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="115" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc23" Header="location" />
+                  <Attribut Name="Area Name" Value="A03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="116" Name="A03_Boue" />
+                  <SubArea id="117" Name="A03_Sec" />
+                  <SubArea id="172" Name="A03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="118" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc24" Header="location" />
+                  <Attribut Name="Area Name" Value="A04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="119" Name="A04_Boue" />
+                  <SubArea id="120" Name="A04_Sec" />
+                  <SubArea id="174" Name="A04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="121" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc25" Header="location" />
+                  <Attribut Name="Area Name" Value="A05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="122" Name="A05_Boue" />
+                  <SubArea id="123" Name="A05_Sec" />
+                  <SubArea id="176" Name="A05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="124" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc26" Header="location" />
+                  <Attribut Name="Area Name" Value="B01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="125" Name="B01_Boue" />
+                  <SubArea id="126" Name="B01_Sec" />
+                  <SubArea id="178" Name="B01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="127" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc27" Header="location" />
+                  <Attribut Name="Area Name" Value="B02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="128" Name="B02_Boue" />
+                  <SubArea id="129" Name="B02_Sec" />
+                  <SubArea id="180" Name="B02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="130" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc28" Header="location" />
+                  <Attribut Name="Area Name" Value="B03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="131" Name="B03_Boue" />
+                  <SubArea id="132" Name="B03_Sec" />
+                  <SubArea id="182" Name="B03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="133" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc29" Header="location" />
+                  <Attribut Name="Area Name" Value="B04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="134" Name="B04_Boue" />
+                  <SubArea id="135" Name="B04_Sec" />
+                  <SubArea id="184" Name="B04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="136" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc30" Header="location" />
+                  <Attribut Name="Area Name" Value="B05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="137" Name="B05_Boue" />
+                  <SubArea id="138" Name="B05_Sec" />
+                  <SubArea id="186" Name="B05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="139" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc31" Header="location" />
+                  <Attribut Name="Area Name" Value="C01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="140" Name="C01_Boue" />
+                  <SubArea id="141" Name="C01_Sec" />
+                  <SubArea id="188" Name="C01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="142" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc32" Header="location" />
+                  <Attribut Name="Area Name" Value="C02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="143" Name="C02_Boue" />
+                  <SubArea id="144" Name="C02_Sec" />
+                  <SubArea id="190" Name="C02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="145" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc33" Header="location" />
+                  <Attribut Name="Area Name" Value="C03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="146" Name="C03_Boue" />
+                  <SubArea id="147" Name="C03_Sec" />
+                  <SubArea id="192" Name="C03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="148" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc34" Header="location" />
+                  <Attribut Name="Area Name" Value="C04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="149" Name="C04_Boue" />
+                  <SubArea id="150" Name="C04_Sec" />
+                  <SubArea id="194" Name="C04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="151" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc35" Header="location" />
+                  <Attribut Name="Area Name" Value="C05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="152" Name="C05_Boue" />
+                  <SubArea id="153" Name="C05_Sec" />
+                  <SubArea id="196" Name="C05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="154" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc36" Header="location" />
+                  <Attribut Name="Area Name" Value="D01_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="155" Name="D01_Boue" />
+                  <SubArea id="156" Name="D01_Sec" />
+                  <SubArea id="198" Name="D01_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="157" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc37" Header="location" />
+                  <Attribut Name="Area Name" Value="D02_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="158" Name="D02_Boue" />
+                  <SubArea id="159" Name="D02_Sec" />
+                  <SubArea id="200" Name="D02_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="160" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc38" Header="location" />
+                  <Attribut Name="Area Name" Value="D03_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="161" Name="D03_Boue" />
+                  <SubArea id="162" Name="D03_Sec" />
+                  <SubArea id="202" Name="D03_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="163" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc39" Header="location" />
+                  <Attribut Name="Area Name" Value="D04_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="164" Name="D04_Boue" />
+                  <SubArea id="165" Name="D04_Sec" />
+                  <SubArea id="204" Name="D04_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+              <Module Name="Tracking" Type="ImgProc">
+                <Set Name="Default">
+                  <Attribut Name="Active" Value="1" Header="active" />
+                  <Attribut Name="Id" Value="166" Header="areaid" />
+                  <Attribut Name="Location" Value="Loc40" Header="location" />
+                  <Attribut Name="Area Name" Value="D05_Main" Header="aname" />
+                  <Attribut Name="Skip Image Count" Value="1" Header="skipimagecount" />
+                  <Attribut Name="Force Show Detection in Experiment" Value="0" Header="showdetectioninexperiment" />
+                  <Attribut Name="Show Detection" Value="1" Header="showdetection" />
+                  <Attribut Name="High Detection Threshold" Value="255" Header="hdetthr" />
+                  <Attribut Name="Low Detection Threshold" Value="8" Header="ldetthr" />
+                  <Attribut Name="Animal Color" Value="black" Header="anicolor" />
+                  <Attribut Name="X Min Size" Value="0" Header="xminsize" />
+                  <Attribut Name="X Scale" Value="0.0406499" Header="xscale" />
+                  <Attribut Name="Y Scale" Value="0.0406499" Header="yscale" />
+                  <Attribut Name="Scale Unit" Value="cm" Header="scaleunit" />
+                </Set>
+                <Module Name="CalcTrack" Type="Calculation">
+                  <Set Name="Default">
+                    <Attribut Name="Active" Value="1" Header="active" />
+                    <Attribut Name="Behavior Name" Value="Locomotion" Header="behavname" />
+                    <Attribut Name="Jitter" Value="0" Header="jitter" />
+                    <Attribut Name="OutSideOnError" Value="0" Header="outSideOnError" />
+                    <Attribut Name="Large" Value="0" Header="smllarthr" />
+                    <Attribut Name="Inactivity" Value="0" Header="inasmlthr" />
+                  </Set>
+                  <SubArea id="167" Name="D05_Boue" />
+                  <SubArea id="168" Name="D05_Sec" />
+                  <SubArea id="206" Name="D05_Main" />
+                  <Module Name="SinkCalcul" Type="Sink">
+                    <Set Name="Default">
+                      <Attribut Name="Active" Value="1" Header="active" />
+                    </Set>
+                  </Module>
+                </Module>
+              </Module>
+            </Module>
+          </Module>
+        </Module>
+      </Module>
+      <Areas>
+        <Editor Acq="0" Channel="0">
+          <svg width="659" height="493">
+            <g id="3" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="4" fill="none" stroke="blue" stroke-width="1" exclude="0" x="96" y="35" width="103" height="223" />
+              <ellipse id="6" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="198" cy="148" rx="104" ry="110" />
+              <rect id="7" fill="none" stroke="blue" stroke-width="1" exclude="0" x="201" y="35" width="102" height="225" />
+            </g>
+            <g id="10" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="11" fill="none" stroke="blue" stroke-width="1" exclude="0" x="322" y="39" width="106" height="223" />
+              <ellipse id="68" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="426" cy="150" rx="114" ry="112" />
+              <rect id="12" fill="none" stroke="blue" stroke-width="1" exclude="0" x="427" y="39" width="114" height="225" />
+            </g>
+            <g id="13" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="14" fill="none" stroke="blue" stroke-width="1" exclude="0" x="548" y="38" width="108" height="223" />
+              <ellipse id="70" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="656" cy="150" rx="110" ry="110" />
+              <rect id="15" fill="none" stroke="blue" stroke-width="1" exclude="0" x="653" y="38" width="107" height="225" />
+            </g>
+            <g id="16" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="17" fill="none" stroke="blue" stroke-width="1" exclude="0" x="770" y="44" width="110" height="223" />
+              <ellipse id="72" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="883" cy="157" rx="111" ry="113" />
+              <rect id="18" fill="none" stroke="blue" stroke-width="1" exclude="0" x="879" y="44" width="110" height="225" />
+            </g>
+            <g id="19" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="20" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1000" y="52" width="113" height="223" />
+              <ellipse id="74" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1108" cy="164" rx="110" ry="110" />
+              <rect id="21" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1111" y="52" width="112" height="225" />
+            </g>
+            <g id="22" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="23" fill="none" stroke="blue" stroke-width="1" exclude="0" x="92" y="263" width="103" height="219" />
+              <ellipse id="76" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="196" cy="378" rx="108" ry="108" />
+              <rect id="24" fill="none" stroke="blue" stroke-width="1" exclude="0" x="197" y="263" width="102" height="221" />
+            </g>
+            <g id="25" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="26" fill="none" stroke="blue" stroke-width="1" exclude="0" x="309" y="267" width="113" height="219" />
+              <ellipse id="78" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="420" cy="378" rx="114" ry="110" />
+              <rect id="27" fill="none" stroke="blue" stroke-width="1" exclude="0" x="423" y="267" width="104" height="221" />
+            </g>
+            <g id="28" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="29" fill="none" stroke="blue" stroke-width="1" exclude="0" x="544" y="271" width="108" height="219" />
+              <ellipse id="80" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="653" cy="384" rx="111" ry="110" />
+              <rect id="30" fill="none" stroke="blue" stroke-width="1" exclude="0" x="649" y="271" width="115" height="223" />
+            </g>
+            <g id="31" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="32" fill="none" stroke="blue" stroke-width="1" exclude="0" x="770" y="275" width="110" height="219" />
+              <ellipse id="82" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="882" cy="386" rx="112" ry="110" />
+              <rect id="33" fill="none" stroke="blue" stroke-width="1" exclude="0" x="875" y="275" width="117" height="221" />
+            </g>
+            <g id="34" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="35" fill="none" stroke="blue" stroke-width="1" exclude="0" x="996" y="280" width="113" height="219" />
+              <ellipse id="84" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1110" cy="389" rx="112" ry="109" />
+              <rect id="36" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1109" y="280" width="118" height="218" />
+            </g>
+            <g id="37" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="38" fill="none" stroke="blue" stroke-width="1" exclude="0" x="88" y="490" width="103" height="225" />
+              <ellipse id="86" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="194" cy="604" rx="108" ry="112" />
+              <rect id="39" fill="none" stroke="blue" stroke-width="1" exclude="0" x="193" y="490" width="106" height="227" />
+            </g>
+            <g id="40" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="41" fill="none" stroke="blue" stroke-width="1" exclude="0" x="304" y="495" width="116" height="224" />
+              <ellipse id="88" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="418" cy="609" rx="114" ry="112" />
+              <rect id="42" fill="none" stroke="blue" stroke-width="1" exclude="0" x="419" y="495" width="114" height="224" />
+            </g>
+            <g id="43" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="44" fill="none" stroke="blue" stroke-width="1" exclude="0" x="540" y="499" width="108" height="214" />
+              <ellipse id="90" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="645" cy="607" rx="107" ry="106" />
+              <rect id="45" fill="none" stroke="blue" stroke-width="1" exclude="0" x="645" y="499" width="107" height="216" />
+            </g>
+            <g id="46" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="47" fill="none" stroke="blue" stroke-width="1" exclude="0" x="766" y="503" width="110" height="214" />
+              <ellipse id="92" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="872" cy="611" rx="108" ry="106" />
+              <rect id="48" fill="none" stroke="blue" stroke-width="1" exclude="0" x="871" y="503" width="110" height="216" />
+            </g>
+            <g id="49" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="50" fill="none" stroke="blue" stroke-width="1" exclude="0" x="992" y="507" width="113" height="214" />
+              <ellipse id="94" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1100" cy="615" rx="110" ry="106" />
+              <rect id="51" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1107" y="507" width="112" height="216" />
+            </g>
+            <g id="52" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="53" fill="none" stroke="blue" stroke-width="1" exclude="0" x="84" y="718" width="103" height="221" />
+              <ellipse id="96" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="190" cy="828" rx="108" ry="108" />
+              <rect id="54" fill="none" stroke="blue" stroke-width="1" exclude="0" x="189" y="718" width="110" height="223" />
+            </g>
+            <g id="55" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="56" fill="none" stroke="blue" stroke-width="1" exclude="0" x="310" y="722" width="104" height="223" />
+              <ellipse id="98" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="418" cy="836" rx="110" ry="112" />
+              <rect id="57" fill="none" stroke="blue" stroke-width="1" exclude="0" x="415" y="722" width="105" height="223" />
+            </g>
+            <g id="58" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="59" fill="none" stroke="blue" stroke-width="1" exclude="0" x="536" y="726" width="103" height="227" />
+              <ellipse id="100" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="644" cy="838" rx="110" ry="110" />
+              <rect id="60" fill="none" stroke="blue" stroke-width="1" exclude="0" x="641" y="726" width="113" height="227" />
+            </g>
+            <g id="61" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="62" fill="none" stroke="blue" stroke-width="1" exclude="0" x="762" y="731" width="107" height="220" />
+              <ellipse id="102" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="870" cy="842" rx="110" ry="109" />
+              <rect id="63" fill="none" stroke="blue" stroke-width="1" exclude="0" x="867" y="731" width="115" height="220" />
+            </g>
+            <g id="64" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="65" fill="none" stroke="blue" stroke-width="1" exclude="0" x="988" y="735" width="112" height="218" />
+              <ellipse id="104" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1096" cy="841" rx="110" ry="104" />
+              <rect id="66" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1100" y="739" width="112" height="212" />
+            </g>
+          </svg>
+        </Editor>
+        <Editor Acq="0" Channel="1">
+          <svg width="659" height="493">
+            <g id="105" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="106" fill="none" stroke="blue" stroke-width="1" exclude="0" x="55" y="23" width="109" height="223" />
+              <ellipse id="108" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="166" cy="136" rx="106" ry="108" />
+              <rect id="109" fill="none" stroke="blue" stroke-width="1" exclude="0" x="164" y="24" width="104" height="222" />
+            </g>
+            <g id="112" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="113" fill="none" stroke="blue" stroke-width="1" exclude="0" x="282" y="24" width="109" height="223" />
+              <ellipse id="170" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="391" cy="135" rx="109" ry="111" />
+              <rect id="114" fill="none" stroke="blue" stroke-width="1" exclude="0" x="390" y="25" width="104" height="222" />
+            </g>
+            <g id="115" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="116" fill="none" stroke="blue" stroke-width="1" exclude="0" x="508" y="26" width="109" height="223" />
+              <ellipse id="172" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="617" cy="130" rx="113" ry="108" />
+              <rect id="117" fill="none" stroke="blue" stroke-width="1" exclude="0" x="617" y="26" width="104" height="222" />
+            </g>
+            <g id="118" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="119" fill="none" stroke="blue" stroke-width="1" exclude="0" x="734" y="27" width="109" height="223" />
+              <ellipse id="174" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="846" cy="135" rx="110" ry="109" />
+              <rect id="120" fill="none" stroke="blue" stroke-width="1" exclude="0" x="844" y="28" width="104" height="222" />
+            </g>
+            <g id="121" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="122" fill="none" stroke="blue" stroke-width="1" exclude="0" x="961" y="28" width="109" height="223" />
+              <ellipse id="176" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1068" cy="138" rx="108" ry="110" />
+              <rect id="123" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1070" y="29" width="104" height="222" />
+            </g>
+            <g id="124" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="125" fill="none" stroke="blue" stroke-width="1" exclude="0" x="55" y="249" width="109" height="220" />
+              <ellipse id="178" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="162" cy="362" rx="106" ry="108" />
+              <rect id="126" fill="none" stroke="blue" stroke-width="1" exclude="0" x="164" y="250" width="104" height="219" />
+            </g>
+            <g id="127" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="128" fill="none" stroke="blue" stroke-width="1" exclude="0" x="282" y="251" width="109" height="220" />
+              <ellipse id="180" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="385" cy="360" rx="107" ry="112" />
+              <rect id="129" fill="none" stroke="blue" stroke-width="1" exclude="0" x="390" y="252" width="104" height="219" />
+            </g>
+            <g id="130" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="131" fill="none" stroke="blue" stroke-width="1" exclude="0" x="508" y="252" width="109" height="220" />
+              <ellipse id="182" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="614" cy="362" rx="110" ry="113" />
+              <rect id="132" fill="none" stroke="blue" stroke-width="1" exclude="0" x="617" y="253" width="104" height="219" />
+            </g>
+            <g id="133" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="134" fill="none" stroke="blue" stroke-width="1" exclude="0" x="734" y="253" width="109" height="220" />
+              <ellipse id="184" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="846" cy="362" rx="111" ry="112" />
+              <rect id="135" fill="none" stroke="blue" stroke-width="1" exclude="0" x="844" y="254" width="104" height="219" />
+            </g>
+            <g id="136" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="137" fill="none" stroke="blue" stroke-width="1" exclude="0" x="961" y="254" width="109" height="220" />
+              <ellipse id="186" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1068" cy="368" rx="108" ry="112" />
+              <rect id="138" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1070" y="255" width="104" height="219" />
+            </g>
+            <g id="139" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="140" fill="none" stroke="blue" stroke-width="1" exclude="0" x="55" y="476" width="109" height="217" />
+              <ellipse id="188" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="166" cy="586" rx="106" ry="106" />
+              <rect id="141" fill="none" stroke="blue" stroke-width="1" exclude="0" x="164" y="477" width="104" height="216" />
+            </g>
+            <g id="142" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="143" fill="none" stroke="blue" stroke-width="1" exclude="0" x="278" y="476" width="109" height="223" />
+              <ellipse id="190" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="388" cy="588" rx="112" ry="110" />
+              <rect id="144" fill="none" stroke="blue" stroke-width="1" exclude="0" x="388" y="478" width="116" height="221" />
+            </g>
+            <g id="145" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="146" fill="none" stroke="blue" stroke-width="1" exclude="0" x="508" y="478" width="109" height="223" />
+              <ellipse id="192" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="618" cy="591" rx="110" ry="114" />
+              <rect id="147" fill="none" stroke="blue" stroke-width="1" exclude="0" x="617" y="479" width="106" height="222" />
+            </g>
+            <g id="148" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="149" fill="none" stroke="blue" stroke-width="1" exclude="0" x="734" y="479" width="114" height="224" />
+              <ellipse id="194" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="846" cy="592" rx="110" ry="110" />
+              <rect id="150" fill="none" stroke="blue" stroke-width="1" exclude="0" x="844" y="480" width="113" height="223" />
+            </g>
+            <g id="151" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="152" fill="none" stroke="blue" stroke-width="1" exclude="0" x="961" y="481" width="109" height="217" />
+              <ellipse id="196" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1068" cy="592" rx="108" ry="108" />
+              <rect id="153" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1070" y="482" width="104" height="216" />
+            </g>
+            <g id="154" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="155" fill="none" stroke="blue" stroke-width="1" exclude="0" x="55" y="702" width="109" height="214" />
+              <ellipse id="198" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="169" cy="810" rx="106" ry="110" />
+              <rect id="156" fill="none" stroke="blue" stroke-width="1" exclude="0" x="164" y="703" width="104" height="213" />
+            </g>
+            <g id="157" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="158" fill="none" stroke="blue" stroke-width="1" exclude="0" x="282" y="703" width="105" height="225" />
+              <ellipse id="200" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="388" cy="816" rx="110" ry="110" />
+              <rect id="159" fill="none" stroke="blue" stroke-width="1" exclude="0" x="390" y="704" width="110" height="226" />
+            </g>
+            <g id="160" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="161" fill="none" stroke="blue" stroke-width="1" exclude="0" x="508" y="704" width="111" height="222" />
+              <ellipse id="202" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="616" cy="817" rx="110" ry="109" />
+              <rect id="162" fill="none" stroke="blue" stroke-width="1" exclude="0" x="617" y="706" width="110" height="220" />
+            </g>
+            <g id="163" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="164" fill="none" stroke="blue" stroke-width="1" exclude="0" x="734" y="706" width="106" height="224" />
+              <ellipse id="204" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="844" cy="818" rx="106" ry="108" />
+              <rect id="165" fill="none" stroke="blue" stroke-width="1" exclude="0" x="844" y="707" width="105" height="221" />
+            </g>
+            <g id="166" fill="none" stroke="blue" stroke-width="1" exclude="0">
+              <rect id="167" fill="none" stroke="blue" stroke-width="1" exclude="0" x="961" y="707" width="109" height="214" />
+              <ellipse id="206" fill="none" stroke="blue" stroke-width="1" exclude="0" cx="1064" cy="812" rx="106" ry="106" />
+              <rect id="168" fill="none" stroke="blue" stroke-width="1" exclude="0" x="1070" y="708" width="104" height="213" />
+            </g>
+          </svg>
+        </Editor>
+      </Areas>
+      <AnimalListForm>
+        <MapFields Charts="False" PNG="False" />
+        <Fields />
+      </AnimalListForm>
+      <StartSessionWebSocketForm>
+        <Position X="1151" Y="137" Width="724" Height="805" />
+        <StartStrategy Value="EachLocationsIndividually" />
+        <DisplayMode Value="Locations" />
+      </StartSessionWebSocketForm>
+      <DockPanel FormatVersion="1.0" DockLeftPortion="200" DockRightPortion="250" DockTopPortion="150" DockBottomPortion="150" ActiveDocumentPane="-1" ActivePane="2">
+        <Contents Count="5">
+          <Content ID="0" PersistString="CommonGui.UserSettingsManagerDisplay" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+          <Content ID="1" PersistString="CommunGui.Renderer,0,0,0.512" AutoHidePortion="0.25" IsHidden="False" IsFloat="True" />
+          <Content ID="2" PersistString="CommunGui.Renderer,0,1,0.512" AutoHidePortion="0.25" IsHidden="False" IsFloat="True" />
+          <Content ID="3" PersistString="ChartDisplay.AllActivityCurves" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
+          <Content ID="4" PersistString="ChartDisplay.ActivityCurve" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
+        </Contents>
+        <Panes Count="6">
+          <Pane ID="0" DockState="Document" ActiveContent="-1">
+            <Contents Count="3">
+              <Content ID="0" RefID="2" />
+              <Content ID="1" RefID="3" />
+              <Content ID="2" RefID="4" />
+            </Contents>
+          </Pane>
+          <Pane ID="1" DockState="Document" ActiveContent="-1">
+            <Contents Count="1">
+              <Content ID="0" RefID="1" />
+            </Contents>
+          </Pane>
+          <Pane ID="2" DockState="DockRight" ActiveContent="0">
+            <Contents Count="1">
+              <Content ID="0" RefID="0" />
+            </Contents>
+          </Pane>
+          <Pane ID="3" DockState="Float" ActiveContent="1">
+            <Contents Count="1">
+              <Content ID="0" RefID="1" />
+            </Contents>
+          </Pane>
+          <Pane ID="4" DockState="Float" ActiveContent="2">
+            <Contents Count="1">
+              <Content ID="0" RefID="2" />
+            </Contents>
+          </Pane>
+          <Pane ID="5" DockState="Float" ActiveContent="-1">
+            <Contents Count="1">
+              <Content ID="0" RefID="3" />
+            </Contents>
+          </Pane>
+        </Panes>
+        <DockWindows>
+          <DockWindow ID="0" DockState="Document" ZOrderIndex="0">
+            <NestedPanes Count="2">
+              <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+              <Pane ID="1" RefID="1" PrevPane="0" Alignment="Left" Proportion="0.5" />
+            </NestedPanes>
+          </DockWindow>
+          <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="2">
+            <NestedPanes Count="0" />
+          </DockWindow>
+          <DockWindow ID="2" DockState="DockRight" ZOrderIndex="1">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="2" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
+            </NestedPanes>
+          </DockWindow>
+          <DockWindow ID="3" DockState="DockTop" ZOrderIndex="3">
+            <NestedPanes Count="0" />
+          </DockWindow>
+          <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="4">
+            <NestedPanes Count="0" />
+          </DockWindow>
+        </DockWindows>
+        <FloatWindows Count="3">
+          <FloatWindow ID="0" Bounds="1, 73, 300, 300" ZOrderIndex="0">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="5" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+          <FloatWindow ID="1" Bounds="59, 95, 760, 687" ZOrderIndex="1">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="3" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+          <FloatWindow ID="2" Bounds="810, 96, 678, 684" ZOrderIndex="2">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="4" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+        </FloatWindows>
+      </DockPanel>
+    </Protocol>
+  </Session>
+  <Origin>
+    <DefaultConfigPath Value="C:\ProgramData\ViewPointLS\VpCore2\2CamLive\DefaultConfig.xml" />
+    <Hash Value="28af9b51bf80b16702f7ee0d63023307c7043f975859cb48e9933040bbc66f5d" />
+  </Origin>
+  <Settings>
+    <TrackingPictures>
+      <CompleteSessionPicture Value="False" />
+      <TimeBinSessionPicture Value="False" />
+      <SaveAcquisitionInPicture Value="False" />
+      <DrawStartAndEnd Value="True" />
+    </TrackingPictures>
+  </Settings>
+</PhenoRack>
