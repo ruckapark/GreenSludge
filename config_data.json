@@ -1,0 +1,13 @@
+{
+    "client_name": "Givors",
+    "date_of_sample": "2023-12-05",
+    "directory": "D:/VP_vdt/SYSEG - STEP Givors/18_10_2023",
+    "concentrations": {
+        "0": {"filename": ["0_raw_0001.xls"], "side": "left"},
+        "20": {"filename": ["20_raw_0001.xls"], "side": "left"},
+        "40": {"filename": ["60_40_raw_0001.xls","60_40_raw_0002.xls"], "side": "right"},
+        "60": {"filename": ["60_40_raw_0001.xls","60_40_raw_0002.xls"], "side": "left"},
+        "80": {"filename": ["100_80_raw_0001.xls","100_80_raw_0002.xls"], "side": "right"},
+        "100": {"filename": ["100_80_raw_0001.xls","100_80_raw_0002.xls"], "side": "left"}
+    }
+}
