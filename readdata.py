@@ -12,6 +12,7 @@ import os
 import json
 import pandas as pd
 import numpy as np
+import functions_vdt as vdt
 
 class SludgeClass():
     
@@ -25,6 +26,9 @@ class SludgeClass():
         
         #add class data for each data file
         self.data = self.get_data()
+        self.active_cols = self.get_active_cols()
+        self.adjust_starts()
+        self.remove_noise()
         
     def get_data(self):
         
@@ -43,8 +47,41 @@ class SludgeClass():
             data[conc] = df
             
         return data
+    
+    def get_active_cols(self):
+        
+        active_cols = {}
+        for conc in self.concs:
+            active_cols[conc] = vdt.find_activecols(self.data[conc])
+            if conc == 0: active_cols[conc] = ['G_1','D_1','G_2','D_2','G_3','D_3','G_4','D_4','G_5','D_5','G_6','D_6','G_7','D_7','G_8','D_8','G_9','D_9','G_10','D_10',]
             
-
+        return active_cols
+    
+    def adjust_starts(self):
+        
+        for conc in self.concs:
+            starts = self.config['concentrations'][str(conc)]['starts']
+            if starts:
+                max_end = self.data[conc].index[-1] #max possible index
+                #ends = [min(x,max_end) + (15*60*1000) for x in starts]
+                self.data[conc] = vdt.adjust_starts(self.data[conc],starts,self.active_cols[conc])
+            else:
+                print('No Start Data!!')
+                
+    def remove_noise(self):
+        
+        threshold_value = 250
+        for conc in self.concs:
+            #BUG !! what if active vols missed one in the middle? (extract numbers)
+            for i in range(len(self.active_cols[conc])//2):
+                col = i+1
+                diffs = np.diff(np.abs(self.data[conc]['G_{}'.format(col)]) + np.abs(self.data[conc]['D_{}'.format(col)]))
+                indices_to_zero = np.where(diffs > threshold_value)[0]
+                for ind in indices_to_zero:
+                    #account for diff index shift -1
+                    self.data[conc]['G_{}'.format(col)].iloc[ind+1] = 0
+                    self.data[conc]['D_{}'.format(col)].iloc[ind+1] = 0
+                
         
 def convarea(string):
     multipliers = {'A':0,'B':1,'C':2,'D':3}
@@ -91,18 +128,53 @@ if __name__ == "__main__":
         
     data = SludgeClass(config_data)
     
-    # #go to config specific directory and extract relevant datafiles
-    # os.chdir(config_data['directory'])
-    # all_datafiles = [f for f in os.listdir() if 'raw_0' in f]
-    
-    # #concentration by concentration identify datafiles for relevant concentration
-    # concs = [*config_data['concentrations']]
-    
-    # for conc in concs[4:]:
+    #%% test active columns
         
-    #     #read relevant datafiles
-    #     datafiles = config_data['concentrations'][conc]['filename']
+    for conc in data.concs:
+        # active_cols = vdt.find_activecols(data.data[conc])
+        # print(conc,':',active_cols)
+        # active_cols = ['G_1','D_1','G_2','D_2','G_3','D_3','G_4','D_4','G_5','D_5',
+        #                'G_6','D_6','G_7','D_7','G_8','D_8','G_9','D_9','G_10','D_10']
+        # vdt.plotgraphs(data.data[conc],20,active_cols,title = conc)
         
-    #     #extract relevant plancher side and read data
-    #     side = find_side(config_data['concentrations'][conc]['side'])
-    #     df = read_data(datafiles,side)
+        # starts = config_data['concentrations'][str(conc)]['starts']
+        # ends = [x + (15*60*1000) for x in starts]
+        
+        # df = vdt.adjust_starts(data.data[conc],ends,active_cols)
+        # vdt.plotgraphs(df,20,active_cols,title = conc)
+        
+        # threshold_value = 250
+        # for i in range(len(active_cols)//2):
+        #     col = i+1
+        #     diffs = np.diff(np.abs(df['G_{}'.format(col)]) + np.abs(df['D_{}'.format(col)]))
+        #     indices_to_zero = np.where(diffs > threshold_value)[0]
+        #     for ind in indices_to_zero:
+        #         #account for diff index shift -1
+        #         df['G_{}'.format(col)].iloc[ind+1] = 0
+        #         df['D_{}'.format(col)].iloc[ind+1] = 0
+                
+        vdt.plotgraphs(data.data[conc],20,data.active_cols[conc],title = conc)
+        
+    #%% Sort to order of concentration
+    dataset_scores = {i:{} for i in data.concs}
+    start_zones = {i:[] for i in data.concs}
+    
+    #calculate scores for tests
+    for conc in data.concs:
+        
+        #extract data
+        df = data.data[conc].copy()
+        active_cols = data.active_cols[conc]
+        
+        #love it
+        start_zones[conc] = vdt.find_startzone(data.data[conc],data.active_cols[conc])
+        if conc == 0: start_zones[0] = start_zones[0][:10]
+        dataset_scores[conc] = vdt.testscores(df,20,active_cols,start_zones[conc])
+        
+    #save figures
+    
+    
+    #%% save results
+    date1 = config_data['date_of_sample']
+    date2 = config_data['date_of_test']
+    vdt.write(dataset_scores,data.site,date1,date2,r'D:\VP_vdt\SYSEG - STEP Givors\Results')
