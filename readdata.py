@@ -12,6 +12,9 @@ import os
 import json
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('whitegrid')
 import functions_vdt as vdt
 
 class SludgeClass():
@@ -53,7 +56,8 @@ class SludgeClass():
         active_cols = {}
         for conc in self.concs:
             active_cols[conc] = vdt.find_activecols(self.data[conc])
-            if conc == 0: active_cols[conc] = ['G_1','D_1','G_2','D_2','G_3','D_3','G_4','D_4','G_5','D_5','G_6','D_6','G_7','D_7','G_8','D_8','G_9','D_9','G_10','D_10',]
+            if conc == 0: 
+                active_cols[conc] = ['G_1','D_1','G_2','D_2','G_3','D_3','G_4','D_4','G_5','D_5','G_6','D_6','G_7','D_7','G_8','D_8','G_9','D_9','G_10','D_10']
             
         return active_cols
     
@@ -121,8 +125,13 @@ def find_side(string):
 
 if __name__ == "__main__":
     
+    plt.close('all')
+    
     #read info about test
-    config_data = 'config_data.json'
+    #config_data = 'config_data.json' #test
+    #config_data = r'D:\VP_vdt\SYSEG - STEP Givors\18_10_2023\config_data.json' #test1
+    #config_data = r'D:\VP_vdt\SYSEG - STEP Givors\09_11_2023\config_data.json' #test2
+    config_data = r'D:\VP_vdt\SYSEG - STEP Givors\14_12_2023\config_data.json' #test3
     with open(config_data, 'r') as f:
         config_data = json.load(f)
         
@@ -177,4 +186,40 @@ if __name__ == "__main__":
     #%% save results
     date1 = config_data['date_of_sample']
     date2 = config_data['date_of_test']
-    vdt.write(dataset_scores,data.site,date1,date2,r'D:\VP_vdt\SYSEG - STEP Givors\Results')
+    vdt.write(dataset_scores,data.site,date1,date2,r'D:\VP_vdt\SYSEG - STEP Givors\Results\Boues_results.csv')
+    
+    #%% Plot results
+    file = r'D:\VP_vdt\SYSEG - STEP Givors\Results\Boues_results.csv'
+    results = pd.read_csv(file)
+
+    def extract(df,date,site):
+        return df[(df['Site'] == site) & (df['Date'] == date)].drop(columns = ['Site','Date'])
+
+    def single_frame(df,measure):
+        #return df with one column conc. one column measure
+        data = pd.DataFrame(columns = ['Concentration',measure])
+        temp = df[df['Measure']==measure].drop(columns = ['Date_test','Measure'])
+        for i in temp['Concentration']:
+            tempData = pd.DataFrame(columns = ['Concentration',measure])
+            tempData[measure] = [*np.array(temp[temp['Concentration']==i].drop(columns = 'Concentration').dropna(axis =1))[0]]
+            tempData['Concentration'] = i
+            data = pd.concat([data,tempData], ignore_index = True)
+        return data
+    
+    measures = ['totalact','zonetime','changes','meanampG','meanampD','maxampG','maxampD']
+    others = ['prefzone']
+    
+    temp = extract(results,date1,data.site)
+    
+    for measure in measures:
+        
+        tempdf = single_frame(temp,measure)
+        plt.figure()
+        sns.boxplot(x = 'Concentration',y = measure,data = tempdf,color = 'r')
+            
+    for other in others:
+        
+        tempdf = single_frame(temp,other)
+        temp = tempdf.groupby('Concentration').sum() / tempdf.groupby('Concentration').count() 
+        plt.figure()
+        sns.barplot(x = temp.index.values,y = temp[other].values,color = 'r')
