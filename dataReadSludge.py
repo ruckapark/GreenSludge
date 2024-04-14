@@ -86,6 +86,7 @@ class SludgeClass:
         for conc in self.concs:
             starts = self.config["concentrations"][str(conc)]["starts"]
             if starts:
+                starts = self.check_starts(starts) #convert to miliseconds if in mm.ss format
                 max_end = self.data[conc].index[-1]  # max possible index
                 # ends = [min(x,max_end) + (15*60*1000) for x in starts]
                 self.data[conc] = vdt.adjust_starts(
@@ -93,6 +94,16 @@ class SludgeClass:
                 )
             else:
                 print("No Start Data!!")
+                
+    def check_starts(self,starts):
+        
+        """ Return milisecond integers if start format written in m.ss format """
+        
+        if starts[-1] < 25:
+            for i,s in enumerate(starts):
+                s = "{:.2f}".format(s)
+                starts[i] = int(s.split('.')[0]) * 60000 + int(s.split('.')[-1]) * 1000
+        return starts
 
     def remove_noise(self):
 
