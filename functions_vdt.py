@@ -184,6 +184,27 @@ def adjust_starts(df,start_times,active_cols):
     
     return final_df
 
+def get_auto_starts(df_agg,cutoff,fps,timestep):
+    
+    bout = 8*60*fps
+    
+    df = df_agg.copy()
+    df[df < cutoff] = 0
+    
+    #BUG should be for col in active cols.....
+    starts = np.zeros(20)
+    for i in range(20):
+        
+        arr = df[i+1].values
+        zero_indices = np.where(arr == 0)[0]
+        
+        for x in range(len(zero_indices) - bout):
+            if zero_indices[x+bout] - zero_indices[x] == bout:
+                starts[i] = x*timestep + 2000
+                break
+            
+    return starts
+
 
 def adjust_starts_old(df,end_times,active_cols):
     

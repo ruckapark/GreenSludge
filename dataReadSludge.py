@@ -28,6 +28,7 @@ class SludgeClass:
 
         # add class data for each data file
         self.data = self.get_data()
+        self.data_agg = self.aggregate_data()
         self.active_cols = self.get_active_cols()
         self.adjust_starts()
         self.remove_noise()
@@ -49,6 +50,20 @@ class SludgeClass:
             data[conc] = df
 
         return data
+
+    def aggregate_data(self):
+        """Return the combined sum of right and left zones for all concetrations"""
+
+        dfs = {}
+        for conc in self.concs:
+            df = pd.DataFrame(index=self.data[conc].index, columns=range(1, 21))
+            for i in range(1, 21):
+                df[i] = (
+                    self.data[conc]["G_{}".format(i)].values
+                    + self.data[conc]["D_{}".format(i)].values
+                )
+            dfs[conc] = df
+        return dfs
 
     def get_active_cols(self):
 
@@ -84,9 +99,24 @@ class SludgeClass:
     def adjust_starts(self):
 
         for conc in self.concs:
-            starts = self.config["concentrations"][str(conc)]["starts"]
-            if starts:
-                starts = self.check_starts(starts) #convert to miliseconds if in mm.ss format
+            # define parameters
+            timeindex = self.data[conc].index
+            fps = len(timeindex[timeindex < 1000])
+            timestep = 1000 // fps
+
+            # use near max value to define cutoff
+            cutoff = np.partition(self.data_agg[conc].values.flatten(), -100)[-100]
+            cutoff = cutoff // 10
+
+            try:
+                starts = vdt.get_auto_starts(self.data_agg[conc], cutoff, fps, timestep)
+                print(starts)
+            except:
+                starts = self.config["concentrations"][str(conc)]["starts"]
+            if starts is not None:
+                starts = self.check_starts(
+                    starts
+                )  # convert to miliseconds if in mm.ss format
                 max_end = self.data[conc].index[-1]  # max possible index
                 # ends = [min(x,max_end) + (15*60*1000) for x in starts]
                 self.data[conc] = vdt.adjust_starts(
@@ -94,15 +124,14 @@ class SludgeClass:
                 )
             else:
                 print("No Start Data!!")
-                
-    def check_starts(self,starts):
-        
-        """ Return milisecond integers if start format written in m.ss format """
-        
+
+    def check_starts(self, starts):
+        """Return milisecond integers if start format written in m.ss format"""
+
         if starts[-1] < 25:
-            for i,s in enumerate(starts):
+            for i, s in enumerate(starts):
                 s = "{:.2f}".format(s)
-                starts[i] = int(s.split('.')[0]) * 60000 + int(s.split('.')[-1]) * 1000
+                starts[i] = int(s.split(".")[0]) * 60000 + int(s.split(".")[-1]) * 1000
         return starts
 
     def remove_noise(self):
@@ -164,7 +193,7 @@ def find_side(string):
         return None
 
 
-#debug
+# debug
 if __name__ == "__main__":
-    
-    print('Script for debugging class')
+
+    print("Script for debugging class")
