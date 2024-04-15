@@ -35,3 +35,6 @@ env/
 
 # Exclude any other file types or specific files
 # filename.ext
+
+# Exclude debug file
+debug.py

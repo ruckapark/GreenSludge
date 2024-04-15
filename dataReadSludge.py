@@ -110,7 +110,7 @@ class SludgeClass:
 
             try:
                 starts = vdt.get_auto_starts(self.data_agg[conc], cutoff, fps, timestep)
-                print(starts)
+                # print(starts) #debug
             except:
                 starts = self.config["concentrations"][str(conc)]["starts"]
             if starts is not None:
