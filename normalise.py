@@ -20,6 +20,16 @@ import dataReadSludge as dR
 sns.set_style("whitegrid")
 import functions_vdt as vdt
 
+def get_upper_quantile(dataset: dR.SludgeClass):
+    
+    data_arr = np.array([],dtype = int)
+    for conc in dataset.concs:
+        df = dataset.data[conc].copy()
+        arr = np.array(df.values).flatten()
+        arr = arr[arr!=0]
+        data_arr = np.concatenate((data_arr,arr))
+        
+    return np.nanquantile(data_arr,0.975)
 
 if __name__ == "__main__":
 
@@ -72,3 +82,8 @@ if __name__ == "__main__":
     axe.axvline(upper_quantile,color = 'r',linestyle = '--')
     
     #add to data class
+    print('Upper quantile: ', get_upper_quantile(data))
+    
+    # %% Plot normalised data
+    for conc in data.concs:
+        vdt.plotgraphs(data.data_[conc], 20, data.active_cols[conc], title=conc)

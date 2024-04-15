@@ -31,6 +31,7 @@ class SludgeClass:
         self.data_agg = self.aggregate_data()
         self.active_cols = self.get_active_cols()
         self.adjust_starts()
+        self.normalise_data()
         self.remove_noise()
 
     def get_data(self):
@@ -124,6 +125,24 @@ class SludgeClass:
                 )
             else:
                 print("No Start Data!!")
+
+    def normalise_data(self):
+
+        q = self.get_upper_quantile()
+        self.data_ = {}
+        for conc in self.concs:
+            self.data_[conc] = self.data[conc].div(q)
+
+    def get_upper_quantile(self):
+
+        data_arr = np.array([], dtype=int)
+        for conc in self.concs:
+            df = self.data[conc].copy()
+            arr = np.array(df.values).flatten()
+            arr = arr[arr != 0]
+            data_arr = np.concatenate((data_arr, arr))
+
+        return np.nanquantile(data_arr, 0.975)
 
     def check_starts(self, starts):
         """Return milisecond integers if start format written in m.ss format"""
