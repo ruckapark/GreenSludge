@@ -223,7 +223,7 @@ def adjust_starts_old(df,end_times,active_cols):
     
     return final_df
 
-def plotgraphs(df,numvdt,active_cols,title = 'No known concentration'):
+def plotgraphs(df,active_cols,title = 'No known concentration'):
     
     fig,ax = plt.subplots(4,5,figsize = (19.2,10.8),sharex = True,sharey = True)
     for i in range(20):
