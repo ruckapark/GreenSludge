@@ -126,6 +126,10 @@ class SludgeClass:
             else:
                 print("No Start Data!!")
 
+            self.timeindex = timeindex
+            self.fps = fps
+            self.timestep = timestep
+
     def normalise_data(self):
 
         q = self.get_upper_quantile()

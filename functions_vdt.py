@@ -97,17 +97,75 @@ def find_meanamp(serie):
         return np.mean(serie[serie < np.quantile(serie,0.98)])
     else:
         return 0.0
+    
+def filter_signs(series:pd.Series,window = 5,fps = 3):
+    
+    """ Only keep zone changes if longer than window (minutes) """
+    
+    window = window*fps
+    arr = series.copy().values
+    current_state = arr[0]
+    
+    #loop through array to sliding window before end
+    i = 0
+    while i < len(arr)-window:
+        if arr[i+1] == current_state:
+            i+=1
+        else:
+            if np.sum(arr[i+1:i+window] == arr[i+1]) == window-1:
+                current_state = arr[i+1]
+                i+=(window-1)
+            else:
+                arr[i+1:i+window] = current_state
+                i+=(window-1)
+    return pd.Series(arr,index = series.index)
 
-def find_changes(ser,window = 100):
+def find_changes(ser,window = 5,fps = 15):
     """ 
+    Fps should be given for any replay data files
     Take rolling average;
     np where > 0 : 1,0
     Take shift 1 sum and check where != 0
     """
+    window = window*fps
     data = ser.rolling(window).mean().dropna()
     signs = pd.Series(np.where(np.array(data) > 0,1,0), index = data.index)
+    signs = filter_signs(signs)
     changes = pd.Series(np.array(signs)[1:] - np.array(signs)[:-1],index = signs.index[:-1])
-    return changes[changes != 0]  
+    return changes[changes != 0]
+
+def find_all_changes(df,fps,active_cols,window = 5,conc = 20):
+    """
+    Parameters
+    ----------
+    df : dataframe
+        datafram containing all active columns.
+    fps : int
+        frames per second.
+    window : int, optional
+        moving average window in minutes. The default is 5.
+
+    Returns
+    -------
+    changes: number of changes per vdt.
+    """
+    
+    #at conc 0 only 10 vdt
+    if conc:
+        changes = np.zeros(20)
+    else:
+        changes = np.zeros(10)
+    
+    #loop through each organism and calculate number of changes
+    for i in range(1,len(changes)+1):
+        if "G_{}".format(i) not in active_cols: 
+            continue
+        cols = ["G_{}".format(i),"D_{}".format(i)]
+        series = (df[cols[1]] - df[cols[0]])
+        change = find_changes(series,window = window,fps = fps)
+        changes[i-1] = len(change)
+        
+    return changes
     
 def find_endzone(df):
     """ 
