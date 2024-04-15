@@ -120,7 +120,7 @@ class SludgeClass:
                 max_end = self.data[conc].index[-1]  # max possible index
                 # ends = [min(x,max_end) + (15*60*1000) for x in starts]
                 self.data[conc] = vdt.adjust_starts(
-                    self.data[conc], starts, self.active_cols[conc]
+                    self.data[conc], starts, self.active_cols[conc], fps=fps
                 )
             else:
                 print("No Start Data!!")

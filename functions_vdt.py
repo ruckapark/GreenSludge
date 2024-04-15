@@ -165,17 +165,17 @@ def find_starts(df,active_cols,all_start):
     return start_times,end_times
 
 
-def adjust_starts(df,start_times,active_cols):
+def adjust_starts(df,start_times,active_cols,time = 10,fps=15):
     
-    final_df = pd.DataFrame(index = np.linspace(0,900000,4501,dtype = int),columns = active_cols)
+    final_df = pd.DataFrame(index = np.linspace(0,time*60000,time*60*fps + 1,dtype = int),columns = active_cols)
     for i in range(20):
         if 'G_{}'.format(i+1) not in active_cols: continue
         cols = ['G_{}'.format(i+1),'D_{}'.format(i+1)]
         temp = df[cols]
-        print(start_times[i],':',temp.index[:5])
+        #print(start_times[i],':',temp.index[:5])
         temp = temp[temp.index > start_times[i]]
-        if temp.shape[0] > 4501:
-            temp = temp.iloc[:4501]
+        if temp.shape[0] > time*60*fps + 1:
+            temp = temp.iloc[:time*60*fps + 1]
         final_df[cols] = np.array(temp)
         
     #remove values above 1000 and 1s
