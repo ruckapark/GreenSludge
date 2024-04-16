@@ -57,8 +57,43 @@ def find_prefzone(df):
     else:
         return 1
     
+def find_all_prefzone(df, fps, active_cols, conc = 20, window = 60):
+    """
+    Find the zone in which orgnaism spends most time after first minute (window)
     
-def find_zonetime(changes,start_zone):
+    Parameters
+    ----------
+    df : pd.DataFrame
+        dataframe of greensludge test at given concentration.
+    fps : int
+        fps of video or recording.
+    active_cols : list
+        active columns.
+
+    Returns
+    -------
+    array of preferred sides.
+
+    """
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        pref_zone = np.zeros(20)
+    else:
+        pref_zone = np.zeros(10)
+    
+    #loop through indidivudals
+    for i in range(1,len(pref_zone)+1):
+        if "G_{}".format(i) not in active_cols:
+            continue
+        cols = ["G_{}".format(i),"D_{}".format(i)]
+        pref = find_prefzone(df[cols].iloc[window*fps:])
+        pref_zone[i-1] = pref
+        
+    return pref_zone
+    
+    
+def find_zonetime(changes,start_zone,window = 10):
     """ 
     Use changepoints to correctly identify time spent in each zone
     
@@ -68,7 +103,7 @@ def find_zonetime(changes,start_zone):
     else (lefthand side)
     """
     if len(changes):
-        times = np.insert(np.array([0,900000]),1,changes)
+        times = np.insert(np.array([0,window*60000]),1,changes)
         time_diff = times[1:] - times[:-1]
         if start_zone:
             return np.sum(time_diff[0::2])/900000
@@ -76,8 +111,98 @@ def find_zonetime(changes,start_zone):
             return np.sum(time_diff[1::2])/900000
     else:
         return start_zone
+    
+def find_all_zonetime(df,fps,active_cols,conc = 20):
+    """
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        dataframe of greensludge test at given concentration.
+    fps : int
+        fps of video or recording.
+    active_cols : list
+        active columns.
+        
+    Returns
+    -------
+    array of total activities.
+
+    """
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        zonetimes = np.zeros(20)
+    else:
+        zonetimes = np.zeros(10)
+    
+    #loop through indidivudals
+    for i in range(1,len(zonetimes)+1):
+        if "G_{}".format(i) not in active_cols:
+            continue
+        cols = ["G_{}".format(i),"D_{}".format(i)]
+        
+        zonetime = find_totalact(df[cols],fps)
+        #zonetime = act / fps #BUG : is it necessary to normalise?
+        zonetimes[i-1] = zonetime
+    
+    return zonetimes
    
 find_totalact = lambda df: np.sum(np.array(df))
+
+def find_all_activity(df,fps,active_cols,side = None,conc = 20):
+    """
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        dataframe of greensludge test at given concentration.
+    fps : int
+        fps of video or recording.
+    active_cols : list
+        active columns.
+    side : str
+        'G' for left side 'D' for right side or None for both
+
+    Returns
+    -------
+    array of total activities.
+
+    """
+    
+    #filter if only for one side
+    if side == 'G':
+        cols = [c for c in df.columns if 'G' in c]
+    elif side == 'D':
+        cols = [c for c in df.columns if 'D' in c]
+    else:
+        cols = df.columns
+    
+    #redefine side to use for active cols
+    df = df[cols].copy()
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        activity = np.zeros(20)
+    else:
+        activity = np.zeros(10)
+    
+    #loop through indidivudals
+    for i in range(1,len(activity)+1):
+        if "G_{}".format(i) not in active_cols:
+            continue
+        if side == None:
+            cols = ["G_{}".format(i),"D_{}".format(i)]
+        else:
+            cols = ["{}_{}".format(side,i)]
+        act = find_totalact(df[cols])
+        act = act / fps #BUG : is it necessary to normalise?
+        activity[i-1] = act
+    
+    print(activity)
+    return activity
+        
+        
     
 def find_maxamp(serie):
     """
@@ -176,6 +301,24 @@ def find_endzone(df):
     #count nonzero
     series = df[column[1]] - df[column[0]]
     return 1*(series.sum()>=0)
+
+def find_all_endzone(df, fps, active_cols,conc = 20,window = 300):
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        end_zone = np.zeros(20)
+    else:
+        end_zone = np.zeros(10)
+    
+    #loop through indidivudals
+    for i in range(1,len(end_zone)+1):
+        if "G_{}".format(i) not in active_cols:
+            continue
+        cols = ["G_{}".format(i),"D_{}".format(i)]
+        end = find_endzone(df[cols].iloc[window*fps:])
+        end_zone[i-1] = end
+        
+    return end_zone
 
 def find_activecols(df):
     """

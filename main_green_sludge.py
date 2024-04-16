@@ -35,24 +35,59 @@ if __name__ == "__main__":
     # %% test active columns
 
     for conc in data.concs:
-        vdt.plotgraphs(data.data[conc], 20, data.active_cols[conc], title=conc)
+        vdt.plotgraphs(data.data[conc], data.active_cols[conc], title=conc)
 
-    # # %% Sort to order of concentration
-    # dataset_scores = {i: {} for i in data.concs}
-    # start_zones = {i: [] for i in data.concs}
+    # %% Sort to order of concentration
+    dataset_scores = {i: {} for i in data.concs}
+    start_zones = {i: [] for i in data.concs}
+    changes = {i: [] for i in data.concs}
+    activity = {i: [] for i in data.concs}
+    activity_left = {i: [] for i in data.concs}
+    activity_right = {i: [] for i in data.concs}
+    pref_zone = {i: [] for i in data.concs}
+    end_zone = {i: [] for i in data.concs}
+    zonetime = {i: [] for i in data.concs}
 
-    # # calculate scores for tests
-    # for conc in data.concs:
+    # calculate scores for tests
+    #this should in itself be a class called scores
+    for conc in data.concs:
 
-    #     # extract data
-    #     df = data.data[conc].copy()
-    #     active_cols = data.active_cols[conc]
+        # extract data
+        df = data.data[conc].copy()
+        active_cols = data.active_cols[conc]
 
-    #     # determine if worm starts on right or left
-    #     start_zones[conc] = vdt.find_startzone(data.data[conc], data.active_cols[conc])
-    #     if conc == 0:
-    #         start_zones[0] = start_zones[0][:10]
-    #     dataset_scores[conc] = vdt.testscores(df, 20, active_cols, start_zones[conc])
+        # determine if worm starts on right or left
+        start_zones[conc] = vdt.find_startzone(data.data[conc], data.active_cols[conc])
+        if conc == 0:
+            start_zones[0] = start_zones[0][:10]
+        
+        
+        #individually calculate scores
+        
+        #changes
+        changes[conc] = vdt.find_all_changes(data.data_[conc], data.fps, data.active_cols[conc], conc = conc)
+        
+        #total activity measures (and left and right)
+        activity[conc] = vdt.find_all_activity(data.data_[conc], data.fps, data.active_cols[conc], conc = conc)
+        activity_left[conc] = vdt.find_all_activity(data.data_[conc], data.fps, data.active_cols[conc], side = 'G', conc = conc)
+        activity_right[conc] = vdt.find_all_activity(data.data_[conc], data.fps, data.active_cols[conc], side = 'D', conc = conc)
+        
+        #prevalent zone
+        pref_zone[conc] = vdt.find_all_prefzone(data.data_[conc], data.fps, data.active_cols[conc])
+        
+        #finalzone
+        end_zone[conc] = vdt.find_all_endzone(data.data_[conc], data.fps, data.active_cols[conc])
+        
+        #zonetime
+        #zonetime[conc] = vdt.find_all_zonetime(data.data_[conc], data.fps, data.active_cols[conc])
+        
+        #max amps
+        
+        
+        #mean amps (evaluate deleting value)
+        
+        
+        #dataset_scores[conc] = vdt.testscores(df, 20, active_cols, start_zones[conc])
         
         
     # # %% save results
