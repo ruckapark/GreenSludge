@@ -112,7 +112,14 @@ def find_zonetime(changes,start_zone,window = 10):
     else:
         return start_zone
     
-def find_all_zonetime(df,fps,active_cols,conc = 20):
+
+def find_zonetime2(sign):
+    """ 
+    Use sign from changes function to calculate time spent in each zone
+    """
+    return len(sign[sign == 0])/len(sign)
+    
+def find_all_zonetime(signs,active_cols,conc = 20):
     """
 
     Parameters
@@ -138,12 +145,8 @@ def find_all_zonetime(df,fps,active_cols,conc = 20):
     
     #loop through indidivudals
     for i in range(1,len(zonetimes)+1):
-        if "G_{}".format(i) not in active_cols:
-            continue
-        cols = ["G_{}".format(i),"D_{}".format(i)]
-        
-        zonetime = find_totalact(df[cols],fps)
-        #zonetime = act / fps #BUG : is it necessary to normalise?
+        sign = signs[i-1]
+        zonetime = find_zonetime2(sign)
         zonetimes[i-1] = zonetime
     
     return zonetimes
@@ -223,6 +226,36 @@ def find_meanamp(serie):
     else:
         return 0.0
     
+def find_all_maxamp(df,fps,active_cols,side = 'G',conc = 20,window = 60):
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        amplitudes = np.zeros(20)
+    else:
+        amplitudes = np.zeros(10)
+        
+    for i in range(1,len(amplitudes)+1):
+        col = "{}_{}".format(side,i)
+        amplitude = find_maxamp(df[col].iloc[window*fps:].values)
+        amplitudes[i-1] = amplitude
+        
+    return amplitudes
+
+def find_all_meanamp(df,fps,active_cols,side = 'G',conc = 20,window = 60):
+    
+    #at conc 0 only 10 organisms
+    if conc:
+        amplitudes = np.zeros(20)
+    else:
+        amplitudes = np.zeros(10)
+        
+    for i in range(1,len(amplitudes)+1):
+        col = "{}_{}".format(side,i)
+        amplitude = find_meanamp(df[col].iloc[window*fps:].values)
+        amplitudes[i-1] = amplitude
+        
+    return amplitudes
+    
 def filter_signs(series:pd.Series,window = 5,fps = 3):
     
     """ Only keep zone changes if longer than window (minutes) """
@@ -257,7 +290,7 @@ def find_changes(ser,window = 5,fps = 15):
     signs = pd.Series(np.where(np.array(data) > 0,1,0), index = data.index)
     signs = filter_signs(signs)
     changes = pd.Series(np.array(signs)[1:] - np.array(signs)[:-1],index = signs.index[:-1])
-    return changes[changes != 0]
+    return changes[changes != 0],signs
 
 def find_all_changes(df,fps,active_cols,window = 5,conc = 20):
     """
@@ -280,6 +313,8 @@ def find_all_changes(df,fps,active_cols,window = 5,conc = 20):
         changes = np.zeros(20)
     else:
         changes = np.zeros(10)
+        
+    signs = []
     
     #loop through each organism and calculate number of changes
     for i in range(1,len(changes)+1):
@@ -287,10 +322,11 @@ def find_all_changes(df,fps,active_cols,window = 5,conc = 20):
             continue
         cols = ["G_{}".format(i),"D_{}".format(i)]
         series = (df[cols[1]] - df[cols[0]])
-        change = find_changes(series,window = window,fps = fps)
+        change,sign = find_changes(series,window = window,fps = fps)
         changes[i-1] = len(change)
+        signs.append(sign)
         
-    return changes
+    return changes,signs
     
 def find_endzone(df):
     """ 
