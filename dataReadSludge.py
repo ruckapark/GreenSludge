@@ -23,6 +23,7 @@ class SludgeClass:
         self.config = conf
         self.site = conf["client_name"]
         self.batch = conf["date_of_sample"]
+        self.test_date = conf["date_of_test"]
         self.directory = conf["directory"]
         self.concs = [int(c) for c in [*conf["concentrations"]]]  # concentrations
 

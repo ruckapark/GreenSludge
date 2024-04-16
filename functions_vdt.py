@@ -202,7 +202,6 @@ def find_all_activity(df,fps,active_cols,side = None,conc = 20):
         act = act / fps #BUG : is it necessary to normalise?
         activity[i-1] = act
     
-    print(activity)
     return activity
         
         
@@ -586,6 +585,52 @@ def write_results(data,s,d1,d2,c,res_dir = None):
                 file.close()
         # elif line not in existingLines:
         # BUG replace entire line if values have changed...    
+
+def create_csv_file(file_path):
+    # Check if the file already exists
+    if not os.path.exists(file_path):
+        # Create the CSV file and write the header
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            # Write the header row
+            header = ['Site','Date','Date_test','Concentration','Measure'] + [str(i) for i in range(1, 21)]
+            writer.writerow(header)
+        print(f"CSV file '{file_path}' created successfully.")
+    else:
+        print(f"CSV file '{file_path}' already exists.")
+
+def write_res(scores,site,date1,date2,results_file):
+    
+    #check if results file already exists
+    create_csv_file(results_file)
+    
+    #read existing lines of file
+    with open(results_file,'r',newline = '') as file:
+        existingLines = [line for line in csv.reader(file, delimiter=',')]
+        file.close()
+    
+    for conc in scores:
+        
+        #concentration scores dictionary
+        scores_conc = scores[conc]
+        for measure in scores_conc:
+            
+            #preallocate and write results
+            arr = np.empty(20)
+            arr[:] = np.nan
+            arr[:len(scores_conc[measure])] = scores_conc[measure]
+            
+            #add array to a line of values for results dir
+            line = [site,date1,date2,conc,measure]
+            line.extend(arr)
+            line = [str(i) for i in line]
+            
+            #check if line already in file, if not write to file in append mode
+            if line[:5] not in [x[:5] for x in existingLines]:
+                with open(results_file,'a',newline = '') as file:
+                    w = csv.writer(file)
+                    w.writerow(line)
+                    file.close()
             
 
 def write(scores,site,date1,date2,res_file):
