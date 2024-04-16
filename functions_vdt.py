@@ -657,3 +657,20 @@ def savefig(fig,name,direc,conc = None):
         fig.savefig('{}.jpg'.format(name))
     os.chdir(root)
     
+def single_frame(df, measure):
+    # return df with one column conc. one column measure
+    data = pd.DataFrame(columns=["Concentration", measure])
+    temp = df[df["Measure"] == measure].drop(columns=["Date_test", "Measure","Site","Date"])
+    for i in temp["Concentration"]:
+        tempData = pd.DataFrame(columns=["Concentration", measure])
+        tempData[measure] = [
+            *np.array(
+                temp[temp["Concentration"] == i]
+                .drop(columns="Concentration")
+                .dropna(axis=1)
+            )[0]
+        ]
+        tempData["Concentration"] = i
+        data = pd.concat([data, tempData], ignore_index=True)
+    return data.set_index('Concentration')
+    
