@@ -152,3 +152,6 @@ if __name__ == "__main__":
         
             fig.suptitle('{}'.format(measure))
             plt.tight_layout()
+            
+            #To calculate score take mean of left amplitude and changes !!
+            #In reference to Pierre Bénite, perform 200*(sum of both)
